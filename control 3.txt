@@ -1,0 +1,17 @@
+#include<stdio.h>
+#define N 10
+int main()
+{ int a[N],sum=0;
+  float average;
+  for(int i=0; i<N;i++)  /*数组输入*/
+   { scanf("%d",&a[i]);
+     sum+=a[i];
+   }
+  average=1.0*sum/N; /*求平均数*/
+  printf("average=%f\n",average);
+  for(int j=0; j<N;j++)
+   { if(a[j]>average) /*找数并输出*/
+        printf("%d ",a[j]);
+   }
+  return 0;
+}

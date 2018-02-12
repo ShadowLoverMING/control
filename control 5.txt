@@ -1,0 +1,24 @@
+#include<stdio.h>
+#define N 10
+int main()
+{
+    int s,i,j,tmp;
+    int a[10]={78,56,38,99,81,86,39,100,49,78};
+    for( i=0; i<10;i++)
+     printf("%d  ",a[i]);
+    printf("\n");
+    for( i=0; i<N-1;i++)
+      { s=i;
+        for( j=i+1;j<10;j++)
+           if(a[s]>a[j]) 
+             s=j;
+        if(s!=i)
+          {tmp=a[s];
+           a[s]=a[i];
+           a[i]=tmp;
+          }
+      }
+    for( i=0; i<10;i++)
+     printf("%d  ",a[i]);
+  return 0; 
+ }
